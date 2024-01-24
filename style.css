@@ -1,0 +1,591 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1.0;
+    z-index: 99;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px;
+    max-width: 100%;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    align-self: center;
+}
+
+.header-left a {
+    transition: opacity 0.2s;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+.logo {
+    height: 20px;
+    width: auto;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    color: black;
+
+}
+
+ul,
+ol {
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.nav>li {
+    margin-right: 45px;
+    text-align: center;
+}
+
+.nav>li:last-child {
+    margin-right: 0px;
+}
+
+.nav-en {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+
+.nav-ja {
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.nav>li:nth-child(6) {
+    border: none;
+    color: white;
+    background-color: transparent;
+    width: 100px;
+    height: 40px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav>li:nth-child(6)>a {
+    border-radius: 38px;
+    background-color: #f79214;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    opacity: 0.5;
+
+}
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main {
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 630px;
+    padding-top: 100px;
+}
+
+.main-wrap {
+    padding: 0 50px 0;
+    max-width: 1140px;
+    margin: auto;
+    position: relative;
+}
+
+
+.main-wrap h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 54px;
+    color: #333;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+.heading {
+    margin-bottom: 70px;
+    width: fit-content;
+}
+
+.achive {
+    height: 180px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.achive img {
+    width: 27.5%;
+}
+
+.achive img:nth-of-type(2) {
+    width: 40%;
+}
+
+
+.counseling2 {
+    color: white;
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    padding: 30px 0;
+    position: relative;
+    border: none;
+}
+
+.counseling2>a {
+    background-color: orange;
+    position: absolute;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.annotation-info {
+    color: #a2a2a4;
+    font-size: 12px;
+}
+
+.about {
+    background-color: #f79214;
+    padding: 44px 0;
+}
+
+.about-wrap {
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 32px;
+}
+
+.about-video {
+    width: 50%;
+}
+
+.info-title {
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 54px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.info {
+    width: 500px;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 24px;
+}
+
+
+
+.carrer-up {
+    width: 158px;
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+@media screen and (max-width:770px) {
+
+    /*ヘッダーを先頭に固定する*/
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        background-color: white;
+    }
+
+    .flex {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+
+    /*ハンバーガーメニュー*/
+    .menu-btn {
+        position: fixed;
+        top: 2px;
+        right: 5px;
+        display: flex;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: transparent;
+    }
+
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #333;
+        position: absolute;
+    }
+
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    .menu-btn span:before {
+        bottom: 5px;
+    }
+
+    .menu-btn span:after {
+        top: 5px;
+    }
+
+    #menu-btn-check:checked~.menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* メニューの表示と非表示*/
+    .nav {
+        display: none;
+    }
+
+    #menu-btn-check:checked~.nav {
+        display: block;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 35px;
+        left: 0;
+        width: 100%;
+        height: 900px;
+        z-index: 90;
+    }
+
+    #menu-btn-check:checked~.nav>li {
+        display: block;
+        width: 100%;
+        margin: 30px auto;
+        color: white;
+        font-size: 15px;
+
+    }
+
+    #menu-btn-check:checked~.nav>li:nth-child(6) {
+        color: white;
+        width: 300px;
+        height: 20px;
+    }
+
+    .ja {
+        color: orange;
+        font-size: 12px;
+    }
+
+    .counseling1 .ja {
+        color: white;
+    }
+
+
+
+    /*背景画像の表示範囲の変更*/
+    main {
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .heading {
+        width: 100%;
+    }
+
+    /*動画や説明、画像を縦並びにする*/
+    .about,
+    .about-wrap,
+    .about-video,
+    .info,
+    .carrer-up {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .about-video {
+        margin-bottom: 16px;
+        width: 75%;
+    }
+
+    .info-title {
+        margin-bottom: 32px;
+    }
+
+    /*背景画像の表示範囲の変更*/
+    .main {
+        background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 900px;
+        z-index: 0;
+    }
+
+    .main-wrap {
+        margin-top: 45vw;
+        width: 80%;
+    }
+
+    .main-wrap h1 {
+        font-size: 25px;
+        line-height: 36px;
+        margin-left: calc(((100vw - 100%)/2)*-1);
+        margin-right: calc(((100vw - 100%)/2)*-1);
+    }
+
+    .achive {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+
+
+    .heading {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .counseling2 {
+        width: calc(100% - 80px);
+        margin: 0 auto;
+    }
+
+    .annotation-info {
+        width: calc(100% - 80px);
+        margin: 0 auto;
+    }
+
+
+}
+
+@media screen and (min-width:771px) and (max-width:1024px) {
+
+    /*ヘッダーを先頭に固定する*/
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: white;
+    }
+
+    /*ハンバーガーメニュー*/
+    .burger-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+    }
+
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: transparent;
+    }
+
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #333;
+        position: absolute;
+    }
+
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    #menu-btn-check:checked~.menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* メニューの表示と非表示*/
+    .nav {
+        display: none;
+    }
+
+    #menu-btn-check:checked~.nav {
+        display: block;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 900px;
+        z-index: 99;
+    }
+
+    #menu-btn-check:checked~.nav>li {
+        display: block;
+        width: 100%;
+        margin: 30px auto;
+        color: white;
+        font-size: 15px;
+    }
+
+    #menu-btn-check:checked~.nav>li:nth-child(6) {
+        color: white;
+        width: 300px;
+        height: 20px;
+    }
+
+
+    .ja {
+        color: orange;
+        font-size: 12px;
+    }
+
+    .counseling1 .ja {
+        color: white;
+    }
+
+
+    /*背景画像の表示範囲の変更*/
+    main {
+        position: absolute;
+        top: 50px;
+        left: 0;
+
+    }
+
+    /*動画や説明、画像を縦並びにする*/
+    .about,
+    .about-wrap,
+    .about-video,
+    .info,
+    .carrer-up {
+        display: block;
+        margin: 0 auto;
+    }
+
+
+
+    .about-video {
+        margin-bottom: 16px;
+        width: 75%;
+    }
+
+    .info-title {
+        margin-bottom: 32px;
+    }
+}
