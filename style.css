@@ -63,6 +63,7 @@ ul,
 ol {
     list-style: none;
     box-sizing: border-box;
+    padding-left: 0;
 }
 
 .nav>li {
@@ -114,8 +115,12 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-    color: inherit;
+.nav>li>a:visited {
+    color: #333;
+}
+
+.nav>li:nth-child(6)>a:visited {
+    color: white;
 }
 
 a:hover {
@@ -155,6 +160,7 @@ main {
     color: #333;
     font-family: "Lato", sans-serif;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .heading {
@@ -202,6 +208,9 @@ main {
     text-decoration: none;
 }
 
+.counseling2>a:visited {
+    color: white;
+}
 
 .annotation-info {
     color: #a2a2a4;
@@ -268,18 +277,22 @@ main {
     }
 
     .flex {
-        max-width: 100%;
+        width: 100%;
         margin: 0 20px;
+    }
+
+    .nav-flex {
+        display: block;
     }
 
     /*ハンバーガーメニュー*/
     .menu-btn {
         position: fixed;
-        top: 2px;
-        right: 5px;
+        top: 10px;
+        right: 10px;
         display: flex;
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
         justify-content: center;
         align-items: center;
         z-index: 90;
@@ -299,20 +312,13 @@ main {
     }
 
     .menu-btn span:before {
-        bottom: 8px;
+        bottom: 10px;
     }
 
     .menu-btn span:after {
-        top: 8px;
+        top: 10px;
     }
 
-    .menu-btn span:before {
-        bottom: 5px;
-    }
-
-    .menu-btn span:after {
-        top: 5px;
-    }
 
     #menu-btn-check:checked~.menu-btn span {
         background-color: rgba(255, 255, 255, 0);
@@ -359,15 +365,23 @@ main {
         height: 20px;
     }
 
-    .ja {
+    .nav-ja {
         color: orange;
         font-size: 12px;
     }
 
-    .counseling1 .ja {
+    .nav-en {
         color: white;
     }
 
+    .nav>li>a:visited .ja {
+        color: orange;
+        font-size: 12px;
+    }
+
+    .nav>li>a:visited .nav-en {
+        color: white;
+    }
 
 
     /*背景画像の表示範囲の変更*/
@@ -375,10 +389,6 @@ main {
         position: absolute;
         top: 50px;
         left: 0;
-    }
-
-    .heading {
-        width: 100%;
     }
 
     /*動画や説明、画像を縦並びにする*/
@@ -407,13 +417,14 @@ main {
         background-repeat: no-repeat;
         background-size: 100%;
         width: 100%;
-        height: 900px;
+        height: 800px;
         z-index: 0;
     }
 
     .main-wrap {
         margin-top: 45vw;
-        width: 80%;
+        width: 100%;
+        padding: 0;
     }
 
     .main-wrap h1 {
@@ -429,10 +440,35 @@ main {
     }
 
 
+    .about {
+        padding: 30px 0;
+    }
+
+    .about-wrap {
+        padding: 0 20px;
+    }
+
+    .about-video {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .info {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .info-title {
+        margin-bottom: 8px;
+    }
+
+    .info-text {
+        margin-bottom: 32px;
+    }
 
     .heading {
         width: 100%;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     .counseling2 {
@@ -441,8 +477,9 @@ main {
     }
 
     .annotation-info {
-        width: calc(100% - 80px);
+        width: 100%;
         margin: 0 auto;
+        padding: 0 20px;
     }
 
 
@@ -456,29 +493,22 @@ main {
         top: 0;
         left: 0;
         width: 100%;
-        height: 60px;
+        height: 20px;
         background-color: white;
     }
 
-    /*ハンバーガーメニュー*/
-    .burger-btn {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        height: 50px;
-        justify-content: center;
-        align-items: center;
-        z-index: 90;
+    .flex {
+        display: block;
     }
 
+    /*ハンバーガーメニュー*/
     .menu-btn {
         position: fixed;
-        top: 10px;
-        right: 10px;
+        top: 15px;
+        right: 15px;
         display: flex;
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
         justify-content: center;
         align-items: center;
         z-index: 90;
@@ -524,11 +554,12 @@ main {
         display: none;
     }
 
+
     #menu-btn-check:checked~.nav {
         display: block;
         position: fixed;
         background-color: rgba(0, 0, 0, 0.5);
-        top: 50px;
+        top: 45px;
         left: 0;
         width: 100%;
         height: 900px;
@@ -550,12 +581,21 @@ main {
     }
 
 
-    .ja {
+    .nav-ja {
         color: orange;
         font-size: 12px;
     }
 
-    .counseling1 .ja {
+    .nav-en {
+        color: white;
+    }
+
+    .nav>li>a:visited .ja {
+        color: orange;
+        font-size: 12px;
+    }
+
+    .nav>li>a:visited .nav-en {
         color: white;
     }
 
